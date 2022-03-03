@@ -50,16 +50,17 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bg-principal">
-                <form class="row g-3" action="Comandi/registrazione.php" method="POST">
-                    <div class="form-check col-5 form-check-inline">
-                        <input class="form-check-input" type="radio" name="tipo_utente" id="cliente" value="cliente" checked>
+                <div class="form-check col-5 form-check-inline">
+                        <input class="form-check-input" type="radio" name="scelta_utente" id="cliente" value="cliente" checked>
                         <label class="form-check-label" for="cliente">Cliente</label>
                     </div>
                     <div class="form-check col-5 form-check-inline">
-                        <input class="form-check-input" type="radio" name="tipo_utente" id="trainer" value="trainer">
+                        <input class="form-check-input" type="radio" name="scelta_utente" id="trainer" value="trainer">
                         <label class="form-check-label" for="trainer">Trainer</label>
                     </div>
-                    <div>
+                    <div class="box cliente">
+                        <form class="row g-3" action="Comandi/registrazione.php" method="POST">
+                            <input type="hidden" name="tipo_utente" value="cliente">
                         <div>
                             <input type="email" class="form-control my-2" id="email" placeholder="Email" name="email" required>
                         </div>
@@ -75,19 +76,7 @@
                         <div>
                             <input type="text" class="form-control my-2" id="cognome" placeholder="Cognome" name="cognome" required>
                         </div>
-                    </div>
-                    <div class="box trainer">
-                        <div>
-                            <input type="text" class="form-control my-2" id="citta" placeholder="Città" name="citta" required>
-                        </div>
-                        <div>
-                            <input type="text" id="indirizzo"  class="form-control my-2" placeholder="Indirizzo" name="indirizzo" required>
-                        </div>
-                        <div>
-                            <input type="text" id="piva" class="form-control my-2" placeholder="P.Iva"  name="piva" required>
-                        </div>
-                    </div>
-                    <div class="box cliente">
+                                 
                         <div>
                             <input type="number" class="form-control my-2" id="eta" placeholder="Età" name="eta" required>
                         </div>
@@ -100,12 +89,43 @@
                         <div>
                             <input type="text" id="id_trainer" class="form-control my-2" placeholder="Codice Trainer" name="id_trainer" required>
                         </div>
-                    </div>
-                    
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Registrati</button>
                     </div>
                 </form>
+            </div>
+            <div class="box trainer">
+                        <form class="row g-3" action="Comandi/registrazione.php" method="POST">
+                            <input type="hidden" name="tipo_utente" value="trainer">
+                        <div>
+                            <input type="email" class="form-control my-2" id="email" placeholder="Email" name="email" required>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control my-2" id="username" placeholder="Username" name="username" required>
+                        </div>
+                        <div>
+                            <input type="password" class="form-control my-2" id="password" placeholder="Password" name="password" required>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control my-2" id="nome" placeholder="Nome" name="nome" required>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control my-2" id="cognome" placeholder="Cognome" name="cognome" required>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control my-2" id="citta" placeholder="Città" name="citta" required>
+                        </div>
+                        <div>
+                            <input type="text" id="indirizzo"  class="form-control my-2" placeholder="Indirizzo" name="indirizzo" required>
+                        </div>
+                        <div>
+                            <input type="text" id="piva" class="form-control my-2" placeholder="P.Iva"  name="piva" required>
+                        </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Registrati</button>
+                    </div>
+                </form>
+            </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

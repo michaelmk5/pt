@@ -15,7 +15,7 @@
             //var_dump($res); //Stampa a video il contenuto della variabile passata
             if($res[0]['password'] == $password){
                 $_SESSION['login'] = $res[0];
-                header("Location: ../index.php");
+                header("Location: ../index.php?action=tab");
                 
             }else{
                 $_SESSION['error'] = "Password non corretta";
