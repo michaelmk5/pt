@@ -1,0 +1,79 @@
+.bg-principal{
+    background-color: #FF5C00 !important;
+}
+.color-p{
+    color:  #FF5C00;
+    opacity: 1;
+}
+.forma {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #FFFAFA;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 25px 25px 25px 25px;
+}
+.forma:hover{
+    background-color: rgb(255,135,55) !important;
+    border: 1px solid rgb(255,135,55) !important;
+}
+.bg-img{
+    width: 100%;
+    height: 560px;
+    opacity: 0.3;
+    z-index: -1;
+}
+textarea{
+    resize: none;
+    height: 100px;
+}
+.photo{
+    width: 100px;
+    height: 300px;
+}
+.icon{
+    font-size: 28px;
+    color: #FFFFFF
+}
+#wa:hover{
+    color: #32CD32;
+}
+#tw:hover{
+    color: #87CEFA;
+}
+#fb:hover{
+    color: #0000FF;
+}
+#in:hover{
+    color: rgb(131,58,180)
+}
+.hv-100{
+    height: 100vh !important;
+}
+a{
+    color: #FFFFFF !important;
+}
+
+/*CSS Page Login */
+
+.campo{
+    height: 40px;
+    border-radius: 20px 20px 20px 20px;
+}
+.space-top{
+    margin-top: 160px;
+}
+.form{
+    border-radius: 8px;
+    padding: 5px;
+}
