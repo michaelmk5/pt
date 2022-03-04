@@ -10,7 +10,7 @@
     <div class="row" style="--bs-gutter-x: 0rem;">
         <div class="col-3 py-3 text-center">
             <img src="Img\bg-img.jpg" class="justify-content-center top-0 start-0 img-profilo" ><br>
-            <button type="button" class="my-2 btn btn-light" name="mod_img"> <i class="fa-solid fa-pencil"></i> Modifica </button>
+
         </div>
         <div class="col-7 offset-1 d-flex justify-content-around py-3 ">
             <?php
@@ -18,15 +18,15 @@
             ?>
             <div class="container-fluid">
                 <div class="row w-100">
-                    <h1> Dati </h1><br>
+                    <h1> Prenotazioni: </h1><br>
                 </div>
                 <div class="row w-100">
                     <table class="table">
                         <tbody>
                             <tr>
-                                <td>Nome: <?php echo $_SESSION['login']['nome']?></td>
-                                <td>Cognome: <?php echo $_SESSION['login']['cognome']?></td>
-                                
+                                <td>data: <?php echo $_SESSION['login']['data']?></td>
+                                <td>ora: <?php echo $_SESSION['login']['ora']?></td>
+
                             </tr>
                             <tr>
                                 <td>Email: <?php echo $_SESSION['login']['email']?></td>
