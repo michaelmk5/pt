@@ -8,7 +8,7 @@
             header("Location: ../index.php");
         }
     try{
-        $col = new PDO('mysql:host=localhost;dbname=sito_trainer;charset=utf8','root','root');
+        $col = new PDO('mysql:host=localhost;dbname=sito_trainer;charset=utf8','root','password');
         $db = new DB($col);
         $res = $db->profilo($user);
         if(!empty($res)){
