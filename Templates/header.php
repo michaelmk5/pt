@@ -47,8 +47,8 @@ if (isset($_SESSION['login']))
 				<div class="" style="margin-bottom: -32px">
 				<ul class="nav nav-tabs" id="myTab" role="tablist">
 					<li class="nav-item" role="presentation">
-						<button class="scheda nav-link" id="prenotazioni" data-bs-toggle="tab" data-bs-target="#prenotazioni"
-								type="button" role="tab" aria-controls="home" aria-selected="true">Prenotazioni
+						<button class="scheda nav-link" id="prenotazioni-link" data-bs-toggle="tab" data-bs-target="#prenotazioni"
+								type="button" role="tab" aria-controls="home" aria-selected="true";>Prenotazioni
 						</button>
 					</li>
 					<li class="nav-item" role="presentation">

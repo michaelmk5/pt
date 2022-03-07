@@ -16,10 +16,14 @@
             <div class="container-fluid">
                 
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        pag 1
+                    <div class="tab-pane fade show active" id="prenotazioni" role="tabpanel" aria-labelledby="prenotazioni-tab">
+						<?php
+							include 'prenota.php';
+							echo "sono in prenota";
+
+						?>
                     </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="tab-pane fade" id="scheda_allenamento" role="tabpanel" aria-labelledby="profile-tab">
                         pag 2
                     </div>
                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
