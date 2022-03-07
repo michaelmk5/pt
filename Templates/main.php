@@ -1,4 +1,4 @@
-<main class="container-fluid px-0 position-relative mb-5">
+<main class="container-fluid px-0 flex-shrink-0 h-100 ">
     <img src="Img\bg-img.jpg" class="bg-img position-absolute top-0 start-0">
     <div class="row" style="--bs-gutter-x: 0rem">
         <div class="col-5 py-3 text-center">

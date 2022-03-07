@@ -2,7 +2,7 @@
     $action = $_GET['action']??'home';
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <!-- Required meta tags -->
@@ -23,8 +23,8 @@
     <title>Personal Trainer</title>
 </head>
 
-<body>
-    <div id="main_content" class="position-relative hv-100">
+<body class="h-100 d-flex flex-column">
+
         <!--Collegamento php -->
         <?php
             include __DIR__.'/Templates/header.php';
@@ -44,7 +44,7 @@
             }
             include __DIR__.'/Templates/footer.php';
         ?>
-    </div>
+
     
 </body>
 </html>

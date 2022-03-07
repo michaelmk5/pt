@@ -82,7 +82,7 @@ a{
 
 .main-profilo{
     background-color: #FFE2C0;
-    height: 75%;
+    height: 100%;
 }
 
 .img-profilo{
@@ -95,4 +95,26 @@ a{
 .btn-mod{
     width: 200px; 
     height: 40px;
+}
+
+.scheda{
+    border-radius: 10px 10px 0 0 !important;
+    background: white !important;
+    /*height: 30px !important;
+    width: 100px !important;*/
+    color: black;
+    padding: 0.375rem 0.75rem;
+
+
+
+}
+.scheda:hover{
+    cursor: pointer;
+    height: 40px !important;
+    margin-top: -10px;
+    padding-top: 10px;
+
+}
+nav-active{
+    z-index: 2 !important;
 }
