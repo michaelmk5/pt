@@ -22,7 +22,11 @@ class DB
 	public function profilo($user)
 	{
 		$var = $this->findByEmail($user);
+<<<<<<< HEAD
 		$sql = "SELECT * FROM clienti, credenziali  WHERE  credenziali.username = :utente";
+=======
+		$sql = "SELECT * FROM clienti INNER JOIN credenziali ON credenziali_id = credenziali.id WHERE  credenziali.username = :utente";
+>>>>>>> 2b667e297de74da549666cec83371a23a5d335b2
 		$stm = $this->pdo->prepare($sql);
 		$stm->bindParam('utente', $var[0]['username'], PDO::PARAM_STR);
 		$stm->execute();
@@ -30,7 +34,11 @@ class DB
 		if (!empty($ris)) {
 			return $ris;
 		} else {
+<<<<<<< HEAD
 			$sql = "SELECT * FROM trainer, credenziali  WHERE  credenziali.username = :utente";
+=======
+			$sql = "SELECT * FROM trainer INNER JOIN credenziali ON credenziali_id = credenziali.id WHERE  credenziali.username = :utente";
+>>>>>>> 2b667e297de74da549666cec83371a23a5d335b2
 			$stm = $this->pdo->prepare($sql);
 			$stm->bindParam('utente', $var[0]['username'], PDO::PARAM_STR);
 			$stm->execute();
@@ -42,7 +50,11 @@ class DB
 	public function registrazione_cliente($nome, $cognome, $user, $email, $password, $eta, $peso, $altezza, $cod_trainer)
 	{
 		$sql = "INSERT INTO clienti SET nome = :nome, cognome = :cognome, email = :email, peso = :peso, eta = :eta, altezza = :altezza, trainer_id = :trainer_id, credenziali_id = :id;";
+<<<<<<< HEAD
 		$sql2 = "INSERT INTO credenziali SET username = :username, password = :password tipo = 0;";
+=======
+		$sql2 = "INSERT INTO credenziali SET username = :username, password = :password;";
+>>>>>>> 2b667e297de74da549666cec83371a23a5d335b2
 		try {
 			$this->pdo->beginTransaction();
 			$stm2 = $this->pdo->prepare($sql2);
@@ -70,7 +82,11 @@ class DB
 	public function registrazione_trainer($nome, $cognome, $user, $email, $password, $p_iva, $citta, $indirizzo)
 	{
 		$sql = "INSERT INTO trainer SET nome = :nome, cognome = :cognome, email = :email, piva = :piva, citta = :citta, indirizzo = :indirizzo, credenziali_id = :id";
+<<<<<<< HEAD
 		$sql2 = "INSERT INTO credenziali SET username = :username, password = :password, tipo = 1;";
+=======
+		$sql2 = "INSERT INTO credenziali SET username = :username, password = :password;";
+>>>>>>> 2b667e297de74da549666cec83371a23a5d335b2
 		try {
 			$this->pdo->beginTransaction();
 			$stm2 = $this->pdo->prepare($sql2);
@@ -95,6 +111,7 @@ class DB
 		}
 
 	}
+<<<<<<< HEAD
 	public function findIdFromCredenziali($id, $tipo){
 		if($tipo == 0){
 			$sql = "SELECT id FROM clienti WHERE credenziali_id = :id;";
@@ -144,3 +161,25 @@ class DB
 
 	}
 }
+=======
+
+	public function sel_prenotazioni($id)
+	{
+		$var = $this->sel_prenotazioni($user);
+		$sql = "SELECT * FROM cliente INNER JOIN prenotazioni ON cliente_id = cliente.id WHERE  prenotazioni.cliente_id = :utente";
+		$stm = $this->pdo->prepare($sql);
+		$stm->bindParam('utente', $var[0]['cliente_id'], PDO::PARAM_STR);
+		$stm->execute();
+		$ris = $stm->fetchAll();
+		if (!empty($ris)) {
+			return $ris;
+		} else {
+			$sql = "SELECT * FROM trainer INNER JOIN prenotazioni ON trainer_id = trainer.id WHERE  prenotazioni.trainer_id = :utente";
+			$stm = $this->pdo->prepare($sql);
+			$stm->bindParam('utente', $var[0]['trainer_id'], PDO::PARAM_STR);
+			$stm->execute();
+			$ris = $stm->fetchAll();
+			return $ris;
+		}
+	}
+>>>>>>> 2b667e297de74da549666cec83371a23a5d335b2

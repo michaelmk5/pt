@@ -19,12 +19,21 @@
                     <div class="tab-pane fade show active" id="prenotazioni" role="tabpanel" aria-labelledby="prenotazioni-tab">
 						<?php
 							include 'prenota.php';
+<<<<<<< HEAD
 						?>
                     </div>
                     <div class="tab-pane fade" id="scheda_allenamento" role="tabpanel" aria-labelledby="profile-tab">
                     <?php
 							include 'allenamenti.php';
 						?>
+=======
+							echo "sono in prenota";
+
+						?>
+                    </div>
+                    <div class="tab-pane fade" id="scheda_allenamento" role="tabpanel" aria-labelledby="profile-tab">
+                        pag 2
+>>>>>>> 2b667e297de74da549666cec83371a23a5d335b2
                     </div>
                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                         pag 3
