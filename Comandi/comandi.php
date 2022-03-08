@@ -24,7 +24,7 @@ class DB
 		$var = $this->findByEmail($user);
 		$sql = "SELECT * FROM clienti, credenziali  WHERE  credenziali.username = :utente";
 		$stm = $this->pdo->prepare($sql);
-		$stm->bindParam('user', $var[0]['username'], PDO::PARAM_STR);
+		$stm->bindParam('utente', $var[0]['username'], PDO::PARAM_STR);
 		$stm->execute();
 		$ris = $stm->fetchAll();
 		if (!empty($ris)) {
@@ -164,6 +164,19 @@ class DB
 		$stm->execute();
 		$ris = $stm->fetchAll();
 		return $ris;
+	}
+	
+	
+	public function conferma_prenotaz($data, $durata, $id, $tipo){
+		$cliente = $this->findIdFromCredenziali($id, $tipo);
+		$sql = "INSERT INTO prenotazioni SET data_ora = :data, durata = :durata, cliente_id= :id";
+		
+		$stm = $this->pdo->prepare($sql);
+		$stm->bindParam('id', $cliente, PDO::PARAM_INT);
+		$stm->bindParam('data', $data, PDO::PARAM_STR);
+		$stm->bindParam('durata', $durata, PDO::PARAM_INT);
+		$stm->execute();
+
 	}
 }
 
