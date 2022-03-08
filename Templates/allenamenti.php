@@ -7,7 +7,7 @@ if(!isset($_SESSION['login'])){
 }
         try{
             //Collega il DB
-            $col = new PDO('mysql:host=localhost;dbname=sito_trainer;charset=utf8','root','root');
+            $col = new PDO('mysql:host=localhost;dbname=sito_trainer;charset=utf8','root','password');
                 $db = new DB($col);
 				$scheda = $_SESSION['login']['scheda_id'];
                 $ris = $db->findIdFromCredenziali($_SESSION['login']['id'], $_SESSION['login']['tipo']);
@@ -26,7 +26,7 @@ if(!isset($_SESSION['login'])){
 		<div class="col-12 offset-1 d-flex justify-content-around py-3 ">
 			<div class="container-fluid">
 				<div class="row w-100">
-					<h1> Prenotazioni: </h1><br>
+					<h1>Scheda Allenamento: </h1><br>
 				</div>
 				<div class="row w-100">
                     <?php 

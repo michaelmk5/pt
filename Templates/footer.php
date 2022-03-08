@@ -1,5 +1,5 @@
 <footer class="bg-principal text-light  w-100" >
-    <div class="row py-4">
+    <div class="row  py-4" style="--bs-gutter-x:0">
         <div class="col-3 d-flex justify-content-around">
             <a href="https://www.whatsapp.com/?lang=it"> <i class="fa-brands icon fa-whatsapp" id="wa"></i></a>
             <a href="https://twitter.com/?lang=it"> <i class="fa-brands icon fa-twitter" id="tw"></i></a>
